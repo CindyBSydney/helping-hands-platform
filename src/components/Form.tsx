@@ -63,27 +63,6 @@ export default function VolunteerForm(): JSX.Element {
     return <Typography variant="h1" color="success.main">Form submitted successfully!</Typography>;
   }
 
-
-
-  {/*
-  const [error, setError] = useState<string | null>(null);
-
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    setStatus('submitting');
-    try {
-      await submitForm(formData);
-      setStatus('success');
-    } catch (err) {
-      if (err instanceof Error) {
-        setStatus('error');
-        setError(error);
-      }
-    }
-  }
-  */}
-
-
   const canSubmit = formData.name && formData.email && formData.gender && status !== 'submitting';
   return (
     <Form>
