@@ -11,4 +11,7 @@ router.get('/add/:name', catController.create);
 //send cat names to the client
 router.get('/', catController.read); 
 
+//put method is used to update the cat's name
+router.put('/update/:name/:newName', catController.update);
+
 module.exports = router;

@@ -20,5 +20,17 @@ exports.read = (req, res) => { //function to read all the cats and send a respon
     res.send(cat); //send a response to the client with the array of cats
 };
 
+//function to update the name of a cat and send a response to the client
+exports.update = (req, res) => {
+    const { name, newName } = req.params; //extract both parameters from the URL
+    const index = cat.indexOf(name); //find the index of the cat with the old name
+    if (index !== -1) { //if the cat is found
+        cat[index] = newName; //update the cat's name with the new name
+        res.send("Cat updated: " + name + " to " + newName); //send a response to the client with the message "Cat updated"
+    } else {
+        res.send("Cat not found: " + name); //send a response to the client with the message "Cat not found"
+    }
+};
+
 
 
