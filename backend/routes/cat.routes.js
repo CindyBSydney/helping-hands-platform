@@ -14,4 +14,7 @@ router.get('/', catController.read);
 //put method is used to update the cat's name
 router.put('/update/:name/:newName', catController.update);
 
+//delete method is used to delete the cat
+router.delete('/delete/:name', catController.delete);
+
 module.exports = router;

@@ -32,5 +32,17 @@ exports.update = (req, res) => {
     }
 };
 
+//function to delete a cat and send a response to the client
+exports.delete = (req, res) => {
+    const { name } = req.params; //extract the name parameter from the URL
+    const index = cat.indexOf(name); //find the index of the cat with the name
+    if (index !== -1) { //if the cat is found
+        cat.splice(index, 1); //remove the cat from the array
+        res.send("Cat deleted: " + name); //send a response to the client with the message "Cat deleted"
+    } else {
+        res.send("Cat not found: " + name); //send a response to the client with the message "Cat not found"
+    }
+};
+
 
 
