@@ -15,7 +15,10 @@ exports.create = (req, res) => {
     res.send("Cat created: " + name); //send a response to the client with the message "Cat created" 
 };
 
-
+//function to read all the cats and send a response to the client
+exports.read = (req, res) => { //function to read all the cats and send a response to the client
+    res.send(cat); //send a response to the client with the array of cats
+};
 
 
 

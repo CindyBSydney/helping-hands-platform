@@ -8,5 +8,7 @@ router.get('/add/:name', catController.create);
 // :name is the parameter that the server should extract from the URL
 // catController.create is the function that should be called when the server receives a request to this path
 
+//send cat names to the client
+router.get('/', catController.read); 
 
 module.exports = router;
